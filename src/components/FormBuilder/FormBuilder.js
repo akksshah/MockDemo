@@ -88,7 +88,7 @@ export default class FormBuilder extends React.Component {
             }
         }
         if (sortedChoices.length == 0 ) newErrors.push(zero_choice_err)
-        if (sortedChoices.length > 5) newErrors.push(max_choice_count_err)
+        if (sortedChoices.length > 50) newErrors.push(max_choice_count_err)
         // if (choicesArray.length > 50) newErrors.push(max_choice_count_err);
         if (dup) newErrors.push(duplicate_choices_err);
         this.setState({ val_err: newErrors });
@@ -114,13 +114,7 @@ export default class FormBuilder extends React.Component {
             <div>
                 <form className={styles.root} onSubmit={this.Form_Submit_Event}>
                     <div className={styles.header}>Field Builder</div>
-                    {!!val_err.length && (
-                        <ul className={styles.errorContainer}>
-                            {val_err.map(error => (
-                                <li key={error}>{error}</li>
-                            ))}
-                        </ul>
-                    )}
+
                     <div className={styles.fields_container}>
                         <div className={styles.label}>Label</div>
                         <TextInput name="label" value={label} onChange={this.Change_Of_Input} />
@@ -146,7 +140,7 @@ export default class FormBuilder extends React.Component {
                                 ]}
                         />
                         <div className={styles.bottomContainer}>
-                            <Button type="submit" width="250px" height="50px" backgroundColor="#72b566" color="white" onClick={this.Form_Submit_Event}>
+                            <Button type="submit" width="250px" height="50px" backgroundColor="green" color="white" onClick={this.Form_Submit_Event}>
                                 Save changes
                             </Button>
                             <div className={`${styles.label} ${styles.bottomText}`}>Or</div>
@@ -155,6 +149,13 @@ export default class FormBuilder extends React.Component {
                             </div>
                         </div>
                     </div>
+                    {!!val_err.length && (
+                        <ul className={styles.errorContainer}>
+                            {val_err.map(error => (
+                                <li key={error}>{error}</li>
+                            ))}
+                        </ul>
+                    )}
                 </form>
             </div>
         )

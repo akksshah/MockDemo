@@ -2,10 +2,12 @@
 
 .label {
     color: black;
+    font-size: 14px;
     font-weight: bold;
     align-self: center;
 }
 .multipleSelect {
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
 }
@@ -48,15 +50,15 @@
 }
 
 .root {
-    width: 100%;
+    width: 50%;
     border-radius: 8px;
     border: 1px solid #87ceeb;
     margin: 100px auto;
     overflow: hidden;
 }
 .footer {
-    background-color: #dcedf6;
-    color: #346c90;
+    background-color: wheat;
+    color: wheat;
     font-weight: bold;
     font-size: 24px;
     padding: 10px 20px;
@@ -66,11 +68,11 @@
 .errorContainer {
     padding: 0 0 0 40px;
     margin: 10px 0;
-    color: #ed3323;
+    color: red;
 }
 
 .header {
-    background-color: #dcedf6;
+    background-color: lightblue;
     color: #346c90;
     font-weight: bold;
     font-size: 24px;
