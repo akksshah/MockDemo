@@ -1,0 +1,9 @@
+.root {
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 5px;
+    color: black;
+    outline: none;
+}
+
+.Select {}
